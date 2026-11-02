@@ -1,0 +1,10 @@
+0	15	15:26:50	INSERT INTO Department (dept_name) VALUES (NULL)	Error Code: 1048. Column 'dept_name' cannot be null	0.000 sec
+0	16	15:27:01	INSERT INTO Course (course_code, course_title, credit_units) VALUES ('TST101', 'Test', 9)	Error Code: 1062. Duplicate entry 'TST101' for key 'course.course_code'	0.047 sec
+0	17	15:27:07	INSERT INTO Student (matric_no, full_name, dept_id) VALUES ('TEST001', 'Test', 999)	Error Code: 1452. Cannot add or update a child row: a foreign key constraint fails (`sen307_11184`.`student`, CONSTRAINT `student_ibfk_1` FOREIGN KEY (`dept_id`) REFERENCES `department` (`dept_id`))	0.047 sec
+0	18	15:27:13	INSERT INTO Student (matric_no, full_name, gender) VALUES ('TEST002', 'Test', 'X')	Error Code: 1265. Data truncated for column 'gender' at row 1	0.000 sec
+3	19	15:27:19	SELECT COUNT(*) FROM Department
+ LIMIT 0, 1000	1 row(s) returned	0.032 sec / 0.000 sec
+3	20	15:27:19	SELECT COUNT(*) FROM Course
+ LIMIT 0, 1000	1 row(s) returned	0.000 sec / 0.000 sec
+3	21	15:27:19	SELECT COUNT(*) FROM Student
+ LIMIT 0, 1000	1 row(s) returned	0.000 sec / 0.000 sec
